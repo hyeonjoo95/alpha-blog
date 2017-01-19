@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   
+  resources :tests
+  resources :articles
   root 'pages#home'
   get 'about', to: 'pages#about'
+  get 'test', to: 'tests#index'
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
